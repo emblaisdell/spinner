@@ -34,7 +34,7 @@ class vtkTimerCallback:
 
 def main():
     reader = vtk.vtkSTLReader()
-    reader.SetFileName("./main.stl")
+    reader.SetFileName("./heart_2.stl")
 
     # Create mapper and actor
     mapper = vtk.vtkPolyDataMapper()
@@ -64,8 +64,8 @@ def main():
     camera = renderer.GetActiveCamera()
     camera.Zoom(1.5)
     # print(camera.GetPosition())
-    camera.SetClippingRange(1, 20)
-    camera.SetPosition(0, 5, 10)
+    # camera.SetClippingRange(1, 20)
+    # camera.SetPosition(0, 5, 10)
     render_window.Render()
 
     # initialize - prior to creating timer event
