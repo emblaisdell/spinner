@@ -12,7 +12,7 @@ omega = 120  # angular velocity
 
 
 def scale_at(t):
-    return 0.7 - 0.05 * math.cos(32 * t)
+    return 0.7 - 0.1 * math.sin(2.0*math.pi / (1+math.exp(-10.0*((t%2)-1))))
 
 
 def scale(v, s):
